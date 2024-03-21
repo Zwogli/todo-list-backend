@@ -11,3 +11,6 @@ class TodoItem(models.Model):
     )
     created_at = models.DateField(default=datetime.date.today)
     checked = models.BooleanField(default=False)
+    
+    def __str__(self):
+        return f'({self.id}) {self.title}'
